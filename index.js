@@ -8,10 +8,7 @@ const app = express();
 const port = process.env.PORT || 4000;
 
 // Middleware
-app.use(cors({
-  origin: "https://doon-joinery-building.netlify.app", // Your Netlify domain
-  methods: "GET,POST",
-})); // Allow cross-origin requests (from React frontend)
+app.use(cors()); // Allow cross-origin requests (from React frontend)
 app.use(express.json()); // Automatically parse JSON request bodies
 
 // API endpoint to handle contact form submissions
